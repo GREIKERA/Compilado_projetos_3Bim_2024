@@ -1,177 +1,156 @@
-body {
+:root {
+    --preto: black;
+    --vermelho: red;
+    --amarelo: yellow;
+    --rosa: pink;
+}
 
-    background: rgb(0, 0, 0);
-    color: white;
+body {
+    background: black;
     margin: 0px;
-    margin-bottom: 60px;
+    margin-bottom: 45px;
+    width: 100%;
+}
+
+header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: "Bungee Tint", sans-serif;
+    font-size: 100px;
+    text-align: center;
+    width: 100%;
+    
+}
+
+.chama-texto h2 {
+    color: var(--rosa);
+    font-family: "Julee", cursive;
+    font-size: 76px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    
 }
 
 
 header {
+    transition: filter 0.1s ease-in-out;
+}
+
+header:hover {
+    filter: brightness(400%);
+    
+}
+
+.chama-texto-coracao {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    border-top: solid deeppink 10px;
+    border-bottom: solid deeppink 10px;
+
+    background: lightpink linear-gradient(5deg, #ff0000, #00000000);
+
+    width: 100%;
+}
+
+
+.chama-coracao img {
+    height: 410px;
+    margin-top: -75px;
+    margin-bottom: -40px;
+    
+}
+
+@keyframes blink-animation {
+    50% {
+        opacity: 0;
+    }
+}
+
+.bate-coracao {
+    animation: blink-animation 1.5s steps(1, end) 0.1s infinite;
+
+}
+
+
+.chama-presente h3 {
+    color: var(--vermelho);
+    font-family: "Jaro", sans-serif;
+    font-size: 56px;
     text-align: center;
-    border-bottom: solid 2px red;
-    margin: 0px;
-    padding: 10px;
-    font-size: 76px;
-    color: red;
-    background-color: rgb(10, 216, 243);
-    font-family: "Bungee Spice", sans-serif;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+  
+/* width: 100%;  */
+
+}
+
+.chama-presente h3:hover {
+    color: var(--amarelo);
+
 }
 
 
-.serie_2A h2 {
+#container img {
+    height: 300px;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
-    justify-content: center;
+}
+
+#container {
     display: flex;
-    font-family: "Bangers", system-ui;
-    font-size: 46px;
-    color: rgb(210, 30, 129);
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    text-align: center;
+
 }
 
-
-.projetos_do_2A {
-
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 5px;
-}
-
-
-.projetos_do_2A img {
+#container img {
     opacity: 0.5;
-    height: 200px;
+
 }
 
-.projetos_do_2A img:hover {
-
+#container img:hover {
     opacity: 1;
-    border: solid 5px yellow;
-    transform: scale(1.03);
-    transition: 0.3s ease, opacity 0s ease;
-    transform-origin: center;
-    margin-bottom: 3px;
-    margin-right: 5px;
+    border: solid 3px rgb(238, 148, 14);
+
 }
 
-.serie_2B h2 {
+.caixa-presente  {
+    flex-basis: calc(27%);
+    text-align: center;
+    width: 100%;
 
-    justify-content: center;
-    display: flex;
-    color: rgb(254, 149, 20);
-    font-size: 46px;
-    font-family: "Bangers", system-ui;
 }
 
+footer {
+    background: radial-gradient(aquamarine, transparent);
+    color: var(--preto);
+    bottom: 5px;
+    position: fixed;
+    width: 100%;
+    height: 25px;
+    padding-bottom: 25px;
+     
+}
+footer p {
+    text-align: center;
+    font-family: "Freckle Face", system-ui;
+    font-size: 25px;
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-left: 15px;
+    width:auto;
 
-.projetos_do_2B {
-
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 5px;
 }
 
+main  {
+width: 100%;
 
-.projetos_do_2B img {
-    opacity: 0.5;
-    height: 200px;
-}
-
-.projetos_do_2B img:hover {
-
-    opacity: 1;
-    border: solid 5px yellow;
-    transform: scale(1.03);
-    transition: 0.3s ease, opacity 0s ease;
-    transform-origin: center;
-    margin-bottom: 3px;
-    margin-right: 5px;
-}
-
-.serie_3A h2 {
-
-    justify-content: center;
-    display: flex;
-    font-family: "Bangers", system-ui;
-    font-size: 46px;
-    color: rgb(30, 210, 105);
-}
-
-
-.projetos_do_3A {
-
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 5px;
-}
-
-
-.projetos_do_3A img {
-    opacity: 0.5;
-    height: 200px;
-}
-
-.projetos_do_3A img:hover {
-
-    opacity: 1;
-    border: solid 5px yellow;
-    transform: scale(1.03);
-    transition: 0.3s ease, opacity 0s ease;
-    transform-origin: center;
-    margin-bottom: 3px;
-    margin-right: 5px;
-}
-
-
-.serie_3B h2 {
-
-    justify-content: center;
-    display: flex;
-    color: rgb(252, 8, 8);
-    font-size: 46px;
-    font-family: "Bangers", system-ui;
-}
-
-
-.projetos_do_3B {
-
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 5px;
-}
-
-
-.projetos_do_3B img {
-    opacity: 0.5;
-    height: 200px;
-}
-
-.projetos_do_3B img:hover {
-
-    opacity: 1;
-    border: solid 5px yellow;
-    transform: scale(1.03);
-    transition: 0.3s ease, opacity 0s ease;
-    transform-origin: center;
-    margin-bottom: 3px;
-    margin-right: 5px;
 }
